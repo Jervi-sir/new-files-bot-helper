@@ -7,6 +7,10 @@ a script that
 			-> [otherwise it will push it into the array]
 				-> [save array in the opened file]
 ```
+### To run
+```
+	python filterNewFiles.py
+```
 
 ### packages used
 

@@ -7,7 +7,8 @@
 import os
 from helpers import saveNames, openFile, getCurrentPath
 print("\033[0;37;40m bot startssssssssss bruh \033[0m ")
-filename = 'filesVisited.txt'
+
+filename = 'filesVisited.pkl'
 currentPath = getCurrentPath()
 
 fileToTest = openFile(filename)
@@ -18,9 +19,9 @@ for file in os.listdir(currentPath):
     if file.endswith(".mp4"):       #if its an mp4
         if file in fileToTest:      #remove if already saved
             os.remove(file)
-            print("\033[1;33;40m file exists,\t\t so remove \033[0m ")
+            print("\033[1;33;40m file exists,\t\t so removed \033[0m ")
         else:
-            print("\033[1;32;40m file doesnt exist,\t so save \033[0m ")
+            print("\033[1;32;40m file doesnt exist,\t so saved \033[0m ")
             fileToTest.append(file) #save if its new
     
 #resave names in the file
