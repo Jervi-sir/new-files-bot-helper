@@ -8,8 +8,10 @@ a script that
 				-> [save array in the opened file]
 ```
 ### To run
+just drop the `filter_bot.py` file in the targeted folder
+it will create `filesVisited.pkl` file that contains already saved file's names
 ```
-	python filterNewFiles.py
+	python filter_bot.py
 ```
 
 ### packages used
