@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!tktkduplicatedbot.py
+!tktkduplicatedbot.ipynb
+!requirements.txt
+!README.md
+!helpers.py
