@@ -1,16 +1,35 @@
-#--------------------------------
-# a bot that remove already existing file in a json file
-# so just run it in a folder, it will save names on json file
-# while checking if already exists, if so it will delete the file
-#--------------------------------
+#this is an All in One file
+
+#----- [ Helpers ] -----
+#save file of files name in file
+import pickle
+from pathlib import Path
+
+def saveNames(filename, arrayName):
+        with open(filename, 'wb') as outp:
+                pickle.dump(arrayName, outp, pickle.HIGHEST_PROTOCOL)
+                return True
+#open fileNames
+def openFile(filename):
+    if not(os.path.exists(filename)):
+        with open(filename, 'wb') as outp:
+            pickle.dump([], outp, pickle.HIGHEST_PROTOCOL)
+    with open(filename, 'rb') as f:
+        data = pickle.load(f)
+        return data
+
+def getCurrentPath():
+    return Path.cwd()
+
+#----- [ runnable code ] -----
 
 import os
-from helpers import saveNames, openFile, getCurrentPath
 print("\033[0;37;40m bot startssssssssss bruh \033[0m ")
 
 filename = 'filesVisited.pkl'
 currentPath = getCurrentPath()
 
+#open database (kinda) if exisiting, or creating it if doesnt
 fileToTest = openFile(filename)
 
 print("\033[0;33;44m saved file opened \033[0m ")
@@ -27,5 +46,4 @@ for file in os.listdir(currentPath):
 #resave names in the file
 print("\033[0;33;42m result saved \033[0m ")
 saveNames(filename, fileToTest)
-
 

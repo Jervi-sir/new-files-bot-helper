@@ -3,9 +3,6 @@
 
 # But not these files...
 !.gitignore
-!filterNewFiles.py
+!filter_bot.py
 !filterNewFiles.ipynb
-!requirements.txt
 !README.md
-!helpers.py
-!filesVisited.pkl
