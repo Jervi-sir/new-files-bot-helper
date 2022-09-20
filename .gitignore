@@ -3,8 +3,8 @@
 
 # But not these files...
 !.gitignore
-!tktkduplicatedbot.py
-!tktkduplicatedbot.ipynb
+!filterNewFiles.py
+!filterNewFiles.ipynb
 !requirements.txt
 !README.md
 !helpers.py
